@@ -75,7 +75,7 @@ body{
     text-align: left;
 }
 
-.summary-component_plan__content h4{
+.summary-component_plan__content p{
     margin: 0;
     font-weight: 900;
     color: var(--dark-blue);
