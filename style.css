@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+:root{
+    --pale-blue: hsl(225, 100%, 94%);
+    --bright-blue: hsl(245, 75%, 52%);
+    --very-pale-blue: hsl(225, 100%, 98%);
+    --desaturated-blue: hsl(224, 23%, 55%);
+    --dark-blue: hsl(223, 47%, 23%);
+    --font-red-hat: 'Red Hat Display', sans-serif;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-family: var(--font-red-hat);
+    font-weight: 500;
+    font-size: 16px;
+    background: url('images/pattern-background-desktop.svg') no-repeat top center;
+    background-color: var(--pale-blue);
+    height: 100vh;
+}
+
+.summary-component{
+    max-width: 450px;
+    text-align: center;
+    border-radius: 1.5rem;
+    background-color: white;
+}
+
+.summary-component_image{
+    width: 100%;
+    border-radius: 1.5rem 1.5rem 0 0;
+}
+
+.summary-component_content{
+    padding: 0 2.5rem 2rem;
+}
+
+.summary-component_title{
+    color: var(--dark-blue);
+    font-weight: 900;
+    margin-top: 2rem;
+}
+
+.summary-component_description{
+    color: var(--desaturated-blue);
+    padding: 1rem 0;
+}
+
+.summary-component_plan{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--very-pale-blue);
+    padding: 1.5rem;
+    border-radius: .5rem;
+    margin-bottom: 2rem;
+}
+
+.summary-component_plan__type{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.summary-component_plan__content{
+    text-align: left;
+}
+
+.summary-component_plan__content h4{
+    margin: 0;
+    font-weight: 900;
+    color: var(--dark-blue);
+}
+
+.summary-component_plan__type__price{
+    color: var(--desaturated-blue);
+}
+
+.summary-component_plan__change{
+    font-weight: 900;
+    color: var(--bright-blue);
+}
+
+.summary-component_plan__change:hover{
+    text-decoration: none;
+    color: hsl(245, 75%, 52%, .7);
+}
+
+.summary-component_payment-button{
+    display: block;
+    padding: 1rem;
+    border-radius: .5rem;
+    border: none;
+    background-color: var(--bright-blue);
+    color: var(--very-pale-blue);
+    font-weight: 700;
+    margin-bottom: 2rem;
+    text-decoration: none;
+}
+
+.summary-component_payment-button:hover{
+    background-color: hsl(245, 75%, 52%, .7);
+}
+
+.summary-component_cancel-button{
+    border: none;
+    background-color: transparent;
+    font-weight: 700;
+    color: var(--desaturated-blue);
+    text-decoration: none;
+}
+
+.summary-component_cancel-button:hover{
+    color: var(--dark-blue);
+}
+
+@media (max-width: 375px) {
+    .summary-component{
+        width: 20rem;
+    }
+
+    .summary-component_content{
+        padding: 0 1rem 2rem;
+    }
+
+    .summary-component_plan{
+        padding: 1rem;
+    }
+}
